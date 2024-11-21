@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Imagen al Pulsar un Botón</title>
+    <style>
+        /* Estilo general para centrar todo el contenido */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Estilo para el contenedor principal */
+        .contenedor {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Estilo para el botón */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo para la imagen, inicialmente oculta y con un tamaño máximo de 80% del ancho de la pantalla */
+        #imagen {
+            display: none;
+            max-width: 50%;  /* Limita el tamaño de la imagen al 80% del ancho de la pantalla */
+            height: auto;    /* Mantiene la proporción de la imagen */
+            margin-top: 20px; /* Añade algo de espacio por encima */
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Haz clic en el botón para ver una imagen</h1>
+        <button onclick="mostrarImagen()">Mostrar Imagen</button>
+
+        <!-- Imagen que se mostrará al hacer clic -->
+        <img id="imagen" src="./img/entradas_Albacete Balompie vs CD Tenerife_page-0001.jpg" alt="Imagen">
+
+    </div>
+
+    <script>
+        // Función para mostrar la imagen al presionar el botón
+        function mostrarImagen() {
+            const imagen = document.getElementById('imagen');
+            imagen.style.display = 'block'; // Cambia el display para que sea visible
+        }
+    </script>
+</body>
+</html>
