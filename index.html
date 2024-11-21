@@ -52,7 +52,7 @@
 </head>
 <body>
     <div class="contenedor">
-        <h1>Haz clic en el botón para ver una imagen</h1>
+        <h1 id="texto">Haz clic en el botón para ver una imagen</h1>
         <button onclick="mostrarImagen()">Mostrar Imagen</button>
 
         <!-- Imagen que se mostrará al hacer clic -->
@@ -61,10 +61,20 @@
     </div>
 
     <script>
-        // Función para mostrar la imagen al presionar el botón
+        // Crear un objeto Audio
+        var audio = new Audio('./img/Himno  Albacete Balompié.mp3'); // Asegúrate de poner la ruta correcta del archivo de audio
+
+        // Función para mostrar la imagen y reproducir el audio al presionar el botón
         function mostrarImagen() {
             const imagen = document.getElementById('imagen');
             imagen.style.display = 'block'; // Cambia el display para que sea visible
+
+            // Cambiar el texto del encabezado
+            const texto = document.getElementById("texto");
+            texto.innerText = "NOS VAMOS A VER EL ALBACETE EL DOMINGO!";
+
+            // Reproducir el audio
+            audio.play();
         }
     </script>
 </body>
